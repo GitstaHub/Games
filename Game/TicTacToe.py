@@ -104,7 +104,7 @@ def minimax(minimax_board, depth, is_maximizing):
             for col in range(BOARD_COLS):
                 if minimax_board[row][col] == 0:
                     minimax_board[row][col] = 1
-                    score = minimax(minimax_board, depth - 1b, True)
+                    score = minimax(minimax_board, depth - 1, True)
                     minimax_board[row][col] = 0
                     best_score = min(score, best_score)
         return best_score

@@ -1,7 +1,9 @@
 
 from random import randint
 from HangmanDB import words
+import argparse
 
+dbg = 0
 def get_random_word():
     index = randint(0,len(words)-1)
     return words[index]
@@ -27,7 +29,11 @@ def main():
             else:
                 print("_", end=" ")
         while True:
-            guess = input(f"\nAllowed Errors Left {allowed_errors}, Next Guess: ({word.lower()})")
+            if dbg:
+                guess = input(f"\nAllowed Errors Left {allowed_errors}, Next Guess: ({word.lower()})")
+            else :
+                guess = input(f"\nAllowed Errors Left {allowed_errors}, Next Guess: ")
+
             if check_valid_input(guess):
                 break
         guesses.append(guess.lower())
@@ -48,4 +54,10 @@ def main():
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--arg', type=str, help='An optional argument')
+
+    args = parser.parse_args()
+    result =  args.arg if args.arg is not None else "Default Value"
+    dbg = result.lower() in ["dbg","d","debug"]
     main()

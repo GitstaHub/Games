@@ -178,12 +178,12 @@ while True:
     else:
         if check_win(1):
             draw_figures(GREEN)
-            draw_figures(GREEN)
+
         elif check_win(2):
             draw_figures(RED)
-            draw_figures(RED)
+
         else:
             draw_figures(GRAY)
-            draw_figures(GRAY)
+
 
     pygame.display.update()

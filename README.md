@@ -18,6 +18,8 @@ Run TicTacToe game locally with command: `python .\TicTacToe\TicTacToe.py`
 
 Run Hangman game locally with command: `python .\Hangman\Hangman.py`
 
+Run Hangman with the answer visible with command: `.\Hangman\Hangman.py --arg dbg`
+
 Testing
 
 Run testcases for Hangman locally with command: 

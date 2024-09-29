@@ -14,12 +14,16 @@ Getting Started
 
 Games can be run locally
 
-Run TicTacToe game locally with command: `python .\TicTacToe.py`
+Run TicTacToe game locally with command: `python .\TicTacToe\TicTacToe.py`
 
-Run Hangman game locally with command: `python .\Hangman.py`
+Run Hangman game locally with command: `python .\Hangman\Hangman.py`
 
 Testing
 
-Run testcases for Hangman locally with command: `python -m unittest HangmanTest.py`
+Run testcases for Hangman locally with command: 
+
+`cd .\Hangman\` 
+
+`python -m unittest HangmanTest.py`
 
 Kit Durant
